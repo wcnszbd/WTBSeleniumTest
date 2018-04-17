@@ -9,8 +9,7 @@ try:
 except:
     driver.get_screenshot_as_file("error_picture\\"+"xxxx"+".png")
 
-print(111)
-
+print('eee')
 
 
 
