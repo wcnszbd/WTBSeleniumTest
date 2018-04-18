@@ -9,16 +9,22 @@ from pages.page01 import *
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-# 关键字
+# 关键字不需要driver
 class Browser():
     """打开浏览器"""
-    def open(self):
+    def openphone(self):
         chrome_options = Options()
         chrome_options.add_experimental_option("mobileEmulation", mobile_emulation)
         self.driver = webdriver.Chrome(chrome_options=chrome_options)
         self.driver.maximize_window()
         return self.driver
 
+    def openwin(self):
+        self.driver = webdriver.Chrome()
+        self.driver.maximize_window()
+        return self.driver
+
+# 需要driver对象关键字
 class PublicKeyWord():
 
     def __init__(self, driver):
